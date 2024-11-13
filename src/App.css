@@ -1,38 +1,105 @@
-.App {
+.berkshire-swash {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  background: linear-gradient( 180deg, #e9e3d5, #d5dbe9);
+  min-height: 100dvh;
+}
+
+
+main {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  position: relative;
+  margin: 12px 0px;
+  padding-top: 6px;
+  padding-bottom: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #033043;
+  font-size: 4rem;
+  margin: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header h3 {
+  font-family: "Berkshire Swash", serif;
+  font-size: 2rem;
+  position:absolute;
+  top: 25%;
+  left: 55%;
+  color:#fda521;
+  transform: rotate(-7.5deg);
+}
+
+nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  text-align: center;
+  min-height: 48px;
+  min-width: 140px;
+  border: none;
+  border-radius: 6px;
+  background-color: #d1ccbf;
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: #fda521 ;
+  border: none;
+  min-height: 52px;
+  border-radius: 12px;
+  padding: 0px 32px;
+  font-size: 1rem;
+  color: #033043;
+}
+
+.errorDisp {
+  color: red;
+}
+
+section {
+  width: 75vw;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #033043;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 0 15px #0A7273;
+}
+
+section .cityName{
+  text-decoration: underline;
+  text-decoration-color: #fda521;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px; 
+}
+
+section h2 {
+  margin: 18px 0px;
+}
+
+section p {
+  margin: 5px 0px;
 }
