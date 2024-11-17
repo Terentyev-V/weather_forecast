@@ -6,6 +6,7 @@ interface SearchCityProps {
   setCity: React.Dispatch<React.SetStateAction<string>>;
   fetchWeather: () => void;
   error: string | null;
+  clearWeatherHistory: () => void; // Add a new function for clearing the history
 }
 
 export default function SearchCity({
@@ -13,6 +14,7 @@ export default function SearchCity({
   setCity,
   fetchWeather,
   error,
+  clearWeatherHistory,
 }: SearchCityProps) {
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
@@ -34,12 +36,16 @@ export default function SearchCity({
           onKeyPress={handleKeyPress}
           placeholder="Enter your city name"
         />
-
-       
         <Button 
           onClick={fetchWeather}
         >
           Show Me
+        </Button>
+        <Button 
+          onClick={clearWeatherHistory}
+          style={{ backgroundColor: '#ff6347' }} // You can customize the color
+        >
+          Clear Weather
         </Button>
         {error && <p>{error}</p>}
       </Nav>

@@ -24,7 +24,7 @@ export const theme = {
   margins: {
     header: "12px 0px",
     h1: "0px",
-    section: "10px auto",
+    section: "10px 10px",
     sectionH2: "18px 0px",
     sectionP: "5px 0px",
     bottom: "30px",
@@ -103,13 +103,13 @@ export const Button = styled.button`
 export const Section = styled.section`
   width: 75vw;
   max-width: 400px;
+  height: 359.6px;
   margin: ${(props) => props.theme.margins.section};
   padding: 10px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  left: 36%;
+  position: relative;
+  display: inline-block;  /* This keeps each section in line */
+  flex-shrink: 0;  /* Prevent shrinking of the section */
   color: ${(props) => props.theme.colors.text};
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
@@ -131,4 +131,8 @@ export const Section = styled.section`
   p {
     margin: ${(props) => props.theme.margins.sectionP};
   }
+
+  @media only screen and (max-width: 480px) {
+  left: 10%;
+}
 `;
