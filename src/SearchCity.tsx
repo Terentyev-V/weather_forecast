@@ -65,7 +65,7 @@ export default function SearchCity({
       const API_KEY = '37717c9fd5ff815ce373659ae9777c5a';
 
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/find?q=${query}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/find?q=${query}&appid=${API_KEY}&units=metric`
       );
       
       const data = await response.json();
