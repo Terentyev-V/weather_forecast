@@ -10,6 +10,7 @@ export interface WeatherData {
   visibility: number;
   wind_speed: number;
   rain: number;
+  snow: number;
 }
 
 export function useWeatherData() {
@@ -60,7 +61,8 @@ export function useWeatherData() {
             feels_like: json.main.feels_like,
             visibility: json.visibility,
             wind_speed: json.wind.speed,
-            rain: json.rain ? json.rain['1h'] || 0 : 0
+            rain: json.rain ? json.rain['1h'] || 0 : 0,
+            snow: json.snow ? json.snow['1h'] || 0 : 0,
           };
 
           // Check if the city already exists in the history
@@ -94,5 +96,5 @@ export function useWeatherData() {
       });
   };
 
-  return { city, setCity, fetchWeather, weather, history, setHistory, error }; // Make sure setHistory is returned
+  return { city, setCity, fetchWeather, weather, history, setHistory, error, setError }; // Make sure setHistory is returned
 }
